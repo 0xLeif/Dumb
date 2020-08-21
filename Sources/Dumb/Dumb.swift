@@ -10,10 +10,6 @@ public protocol DumbProtocol {
     var dictionary: [AnyHashable: Any] { get set }
 }
 
-public protocol DumbClassProtocol: class, DumbProtocol {
-    var dumb: DumbClassProtocol { get set }
-}
-
 public struct DumbStruct: DumbProtocol {
     public var bool: Bool
     public var string: String
@@ -43,9 +39,7 @@ public struct DumbStruct: DumbProtocol {
     }
 }
 
-public class DumbClass: DumbClassProtocol {
-    public var dumb: DumbClassProtocol = DumbClass()
-    
+public class DumbClass: DumbProtocol {
     public var bool: Bool
     public var string: String
     public var int: Int
