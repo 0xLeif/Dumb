@@ -56,8 +56,6 @@ public struct DumbStruct: DumbProtocol {
 ### Dumb Class
 ```swift
 public class DumbClass: DumbClassProtocol {
-    public var dumb: DumbClassProtocol = DumbClass()
-    
     public var bool: Bool
     public var string: String
     public var int: Int
